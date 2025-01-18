@@ -1,4 +1,4 @@
-
+import { BookmarksIcon, ExploreIcon, HomeIcon, ListIcon, MessagesIcon, MoreIcon, NotificationIcon, ProfileIcon } from "../assets/icons"
 import {PATH} from "../hooks/usePath"
 import {Home, Notification, Messages, Bookmarks, Lists, Explore, Profile, More} from "../pages/Dashboard"
 import {Tweets, TweetsReplies, Media, Likes} from "../pages/Dashboard/ProfilePages"
@@ -93,4 +93,63 @@ export const loginRoutes = [
       element:<Register/>,
       children:[]
    },
-  ]
+]
+
+export const navbarList = [
+    {
+        id:1,
+        title:"Home",
+        path:PATH.home,
+        icon:<HomeIcon active={false}/>,
+        activeIcon:<HomeIcon active={true}/>
+    },
+    {
+        id:2,
+        title:"Explore",
+        path:PATH.explore,
+        icon:<ExploreIcon active={false}/>,
+        activeIcon:<ExploreIcon active={true}/>,
+    },
+    {
+        id:3,
+        title:"Notifications",
+        path:PATH.notification,
+        icon:<NotificationIcon active={false}/>,
+        activeIcon:<NotificationIcon active={true}/>,
+    },
+    {
+        id:4,
+        title:"Messages",
+        path:PATH.messages,
+        icon:<MessagesIcon active={false}/>,
+        activeIcon:<MessagesIcon active={true}/>,
+    },
+    {
+        id:5,
+        title:"Bookmarks",
+        path:PATH.bookmarks,
+        icon:<BookmarksIcon active={false}/>,
+        activeIcon:<BookmarksIcon active={true}/>,
+    },
+    {
+        id:6,
+        title:"Lists",
+        path:PATH.lists,
+        icon:<ListIcon active={false}/>,
+        activeIcon:<ListIcon active={true}/>,
+    },
+    {
+        id:7,
+        title:"Profile",
+        path:PATH.profile,
+        icon:<ProfileIcon active={false}/>,
+        activeIcon:<ProfileIcon active={true}/>,
+    },
+    {
+        id:8,
+        title:"More",
+        path:PATH.more,
+        icon:<MoreIcon active={false}/>,
+        activeIcon:<MoreIcon active={true}/>,
+    },
+]
