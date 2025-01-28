@@ -83,9 +83,8 @@ const Home = () => {
               <RiCalendarScheduleLine className="cursor-pointer"/>
           </div>
           </div>
-          
         </div>
-        <Button isLoading={isLoading} loadingImg={Loading}  extraClass={"w-[108px] !py-4 absolute bottom-1 right-5"} title={"Tweet"}/>
+        <Button isLoading={isLoading} loadingImg={Loading}  extraClass={"!w-[108px] !py-4 absolute bottom-1 right-5"} title={"Tweet"}/>
 
       </form>
       <ul className="">
