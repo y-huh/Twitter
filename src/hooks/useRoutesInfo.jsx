@@ -1,18 +1,11 @@
 import { useEffect, useState } from "react";
 
 const getUserInfo = () => {
-  const [name, setName] = useState(null);
-  const [phone, setPhone] = useState(null);
+  const name = JSON.parse(localStorage.getItem("user_info")).name
+  const phone = JSON.parse(localStorage.getItem("post_list")).phone
+  const postLsit = JSON.parse(localStorage.getItem("post_list"));
 
-  useEffect(() => {
-    const userData = JSON.parse(localStorage.getItem("user_info"));
-    if (userData) {
-      setName(userData.name);
-      setPhone(userData.phone);
-    }
-  }, []);   
-
-  return { name, phone };
+  return { name, phone , postLsit};
 };
 
 export default getUserInfo;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { WiStars } from "react-icons/wi";
 import AvatarIcon from "../../assets/images/avatar.png";
 import  Input  from "../../components/Input";
@@ -30,6 +30,10 @@ const Home = () => {
         postImg: Designsta
     }
   ])
+  useEffect(() => {
+    localStorage.setItem("post_list", JSON.stringify(postLsit));
+  }, [postLsit]);
+
   function handleAddPost(e){
     e.preventDefault()
     const data = {
